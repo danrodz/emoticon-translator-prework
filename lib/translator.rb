@@ -9,7 +9,7 @@ def load_library(path)
   YAML.load_file(path).each do |emotion, emoticons|
     eng = emoticons[0]
     jpn = emoticons[1]
-    library["get_emoticon"][eng] = jpn
+    library["get_meaning"][eng] = jpn
     library["get_meaning"][jpn] = emotion
   end
   library
