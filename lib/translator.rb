@@ -5,10 +5,12 @@ def load_library
   # code goes here
   library = {
     english: {},
-    j
+    japanese: {}
   } 
-  YAML.load_file('emoticons.yml').map do |emotions, emoticon|
-    
+  YAML.load_file('emoticons.yml').each do |emotions, emoticons|
+    emoticons.each.with_index do |emoticon, index|
+      
+    end  
   end
 end
 
