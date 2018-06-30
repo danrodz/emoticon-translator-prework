@@ -7,9 +7,8 @@ def load_library
     english: {},
     japanese: {}
   } 
-  YAML.load_file('emoticons.yml').each do |emotions, emoticons|
-    emoticons.each.with_index do |emoticon, index|
-      
+  YAML.load_file('emoticons.yml').each do |emotion, emoticons|
+      library[:bgk]
     end  
   end
 end
