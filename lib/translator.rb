@@ -9,22 +9,22 @@ def load_library(path)
   YAML.load_file(path).each do |emotion, emoticons|
     eng = emoticons[0]
     jpn = emoticons[1]
-    library["get_meaning"][eng] = jpn
-    library["get_emoticon"][jpn] = emotion
+    library["get_emoticon"][eng] = jpn
+    library["get_meaning"][jpn] = emotion
   end
   library
 end
 
 def get_japanese_emoticon (path, emoticon)
   library = load_library(path)
-  jpn_emoticon = library[:english][emoticon]
+  jpn_emoticon = library["get_emoticon"][emoticon]
   return jpn_emoticon if jpn_emoticon
   "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning (path, emoticon)
   library = load_library(path)
-  emotion = library[:japanese][emoticon]
+  emotion = library["get_meaning"][emoticon]
   return emotion if emotion
   "Sorry, that emoticon was not found"
 end
