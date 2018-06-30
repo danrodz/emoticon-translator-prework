@@ -2,7 +2,6 @@
 require "yaml"
 
 def load_library
-  # code goes here
   library = {
     english: {},
     japanese: {}
@@ -11,9 +10,10 @@ def load_library
       eng = emoticons[0]
       jpn = emoticons[1]
       library[:english][eng] = jpn
-      library[:japanese][jpn] = 
+      library[:japanese][jpn] = emotion
     end  
   end
+  library
 end
 
 def get_japanese_emoticon
