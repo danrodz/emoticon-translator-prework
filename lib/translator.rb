@@ -3,14 +3,14 @@ require "yaml"
 
 def load_library(path)
   library = {
-    english: {},
-    japanese: {}
+    "get_meaning": {},
+    "get_emoticon": {}
   } 
   YAML.load_file(path).each do |emotion, emoticons|
     eng = emoticons[0]
     jpn = emoticons[1]
-    library[:english][eng] = jpn
-    library[:japanese][jpn] = emotion
+    library["get_emoticon"][eng] = jpn
+    library["get_meaning"][jpn] = emotion
   end
   library
 end
