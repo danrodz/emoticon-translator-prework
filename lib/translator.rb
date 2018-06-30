@@ -7,11 +7,10 @@ def load_library(path)
     japanese: {}
   } 
   YAML.load_file(path).each do |emotion, emoticons|
-      eng = emoticons[0]
-      jpn = emoticons[1]
-      library[:english][eng] = jpn
-      library[:japanese][jpn] = emotion
-    end  
+    eng = emoticons[0]
+    jpn = emoticons[1]
+    library[:english][eng] = jpn
+    library[:japanese][jpn] = emotion
   end
   library
 end
