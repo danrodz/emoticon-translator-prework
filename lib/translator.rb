@@ -8,7 +8,8 @@ def load_library
     japanese: {}
   } 
   YAML.load_file('emoticons.yml').each do |emotion, emoticons|
-      library[:bgk]
+      library[:english][emotion] = emoticons[1]
+      library[:japanese]
     end  
   end
 end
