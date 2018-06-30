@@ -3,7 +3,11 @@ require "yaml"
 
 def load_library
   # code goes here
-  library = YAML.load_file('emoticons.yml').map do |emotions, emoticon|
+  library = {
+    english: {},
+    j
+  } 
+  YAML.load_file('emoticons.yml').map do |emotions, emoticon|
     
   end
 end
